@@ -8,13 +8,18 @@ export class MoviesService {
   ) { }
 
   // * API Call page 1 * //
-  getdata(){
-    return this.http.get("http://www.omdbapi.com/?i=tt3896198&apikey=a9201025&s=batman")
+  // getdata(){
+  //   return this.http.get("http://www.omdbapi.com/?i=tt3896198&apikey=a9201025&s=batman")
     
-  }
+  // }
   // * API Call page 2 * //
-movieData(){
-  return this.http.get("http://www.omdbapi.com/?i=tt3896198&apikey=a9201025&s=avengers")
+// movieData(){
+//   return this.http.get("http://www.omdbapi.com/?i=tt3896198&apikey=a9201025&s=avengers")
+// }
+  // * API Call page 3 * //
+moviebackData(search) {
+ 
+  return this.http.get("http://localhost:3000/api/movie/movieDetails", search)
 }
 
   
