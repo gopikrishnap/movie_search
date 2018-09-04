@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient,HttpClientModule } from "@angular/common/http";
+
 @Injectable()
 export class MoviesService {
 
@@ -19,7 +20,8 @@ export class MoviesService {
   // * API Call page 3 * //
 moviebackData(search) {
  
-  return this.http.get("http://localhost:3000/api/movie/movieDetails", search)
+  return this.http.post("http://localhost:3000/api/movie/movieDetails", search)
+  
 }
 
   
